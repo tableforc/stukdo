@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   
   get 'about' => "pages#about"
 
+  resources :tasks do
+    member do
+      put :change
+    end
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
